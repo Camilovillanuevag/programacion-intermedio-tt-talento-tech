@@ -1,0 +1,51 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    # set shared memory limit when using docker compose
+    shm_size: 128mb
+    volumes:
+      - ./db/resources/:/docker-entrypoint-initdb.d/
+      - data:/var/lib/postgresql/data
+    env_file:
+      - ./db/.env
+    # environment:
+    #   POSTGRES_PASSWORD: postgres
+    #   DB_USER: postgres1
+    #   DB_PASSWORD: postgres
+    #   POSTGRES_DB: postgres
+    #   POSTGRES_USER: postgres
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+      
+  backend:
+    build:
+      context: ./api_rest
+      dockerfile: Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - 8080:8080
+    env_file:
+      - ./api_rest/.env
+    # environment:
+    #   DB_HOST: db
+    #   DB_NAM: postgres
+    #   DB_PASSWORD: postgres
+    #   DB_USER: postgres
+    #   JWT_SECRET: secret
+    #   JWT_EXPIRATION: 3600
+volumes:
+  data:
