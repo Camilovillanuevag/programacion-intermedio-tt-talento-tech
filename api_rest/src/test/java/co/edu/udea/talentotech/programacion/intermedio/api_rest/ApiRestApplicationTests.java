@@ -9,5 +9,4 @@ class ApiRestApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
