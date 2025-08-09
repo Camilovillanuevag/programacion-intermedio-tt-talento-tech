@@ -3,7 +3,7 @@
 -- =========================
 INSERT INTO usuario (cedula, nombre, apellido, apellido2, correo, clave, telefono, direccion, rol)
 VALUES
-  ('123456', 'Carlos', 'Caicedo', 'Rodriguez', 'carlos.caicedo@example.com', '$2b$12$hash_carlos', '3001234567', 'Calle 10 #5-20', 'cliente'),
+  ('123456', 'Carlos', 'Caicedo', 'Rodriguez', 'carlos.caicedo@example.com', '$2b$12$hash_carlos', '3001234567', 'Calle 10 #4-20', 'cliente'),
   ('123654', 'Pedro', 'Perez', 'Garcia',       'pedro.perez@example.com',   '$2b$12$hash_pedro',  '3009876543', 'Carrera 15 #45-10', 'cliente'),
   ('987654', 'Maria', 'Gonzalez', 'Lopez',     'maria.gonzalez@example.com','$2b$12$hash_maria',  '3012223344', 'Av. Siempre Viva 123', 'cliente'),
   ('456789', 'Ana',   'Martinez', 'Ruiz',      'ana.martinez@example.com',  '$2b$12$hash_ana',    '3025556677', 'Diagonal 30 #12-34', 'cliente');
