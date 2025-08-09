@@ -1,7 +1,6 @@
 package co.edu.udea.talentotech.programacion.intermedio.api_rest.services;
 
 import java.util.List;
-
 import co.edu.udea.talentotech.programacion.intermedio.api_rest.dto.DetalleFacturaDTO;
 
 public interface DetalleFacturaService {
