@@ -1,0 +1,47 @@
+.restaurantes-list {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 16px;
+}
+.restaurante-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  background: #fafafa;
+}
+.restaurante-card h3 {
+  margin-top: 0;
+}
+.estrellas {
+  color: #ffd700;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+.estrellas .filled {
+  color: #ffd700;
+}
+.estrellas .valor {
+  color: #333;
+  font-size: 0.9em;
+  margin-left: 8px;
+}
+.menu h4 {
+  margin-bottom: 4px;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+.menu li {
+  margin-bottom: 4px;
+}
+.precio {
+  color: #2e7d32;
+  font-weight: bold;
+}
+.precio-promedio {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #2e7d32;
+}

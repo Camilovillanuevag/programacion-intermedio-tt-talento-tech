@@ -1,0 +1,12 @@
+<div class="search-container">
+  <div class="search-wrapper">
+    <div class="search-input-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" placeholder="Busca restaurantes, comida o categorías..." [(ngModel)]="searchTerm" (input)="onSearchChange()" (keyup.enter)="onSearch()">
+    </div>
+    <button class="search-btn" (click)="onSearch()">Buscar</button>
+  </div>
+  <div class="quick-filters">
+    <button class="filter-chip" *ngFor="let category of categories" (click)="onCategoryFilter(category)" [class.active]="selectedCategory === category">{{ category }}</button>
+  </div>
+</div>
