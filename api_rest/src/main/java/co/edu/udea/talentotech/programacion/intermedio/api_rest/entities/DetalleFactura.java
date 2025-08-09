@@ -1,7 +1,6 @@
 package co.edu.udea.talentotech.programacion.intermedio.api_rest.entities;
 
 import java.math.BigDecimal;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
