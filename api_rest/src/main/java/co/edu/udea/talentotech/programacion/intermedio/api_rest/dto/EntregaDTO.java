@@ -1,7 +1,6 @@
 package co.edu.udea.talentotech.programacion.intermedio.api_rest.dto;
 
 import java.time.LocalDate;
-
 import co.edu.udea.talentotech.programacion.intermedio.api_rest.entities.Entrega;
 
 public class EntregaDTO {
